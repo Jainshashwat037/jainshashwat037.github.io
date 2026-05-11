@@ -1,1 +1,407 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jain Shashwat - Data Analyst Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+ 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #2c3e50;
+            min-height: 100vh;
+        }
+ 
+        /* Header Section */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 3rem 1.5rem;
+            text-align: center;
+            border-bottom: 4px solid #3498db;
+        }
+ 
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+ 
+        header p {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            margin-bottom: 1.5rem;
+        }
+ 
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+ 
+        .contact-links a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: 500;
+            border: 2px solid #3498db;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+ 
+        .contact-links a:hover {
+            background: #3498db;
+            color: white;
+        }
+ 
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #ecf0f1;
+        }
+ 
+        nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+ 
+        nav a:hover {
+            color: #3498db;
+        }
+ 
+        /* Main Container */
+        main {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+ 
+        /* Section Styling */
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+ 
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+ 
+        /* Project Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+ 
+        .project-card {
+            background: #f8f9fa;
+            border: 2px solid #ecf0f1;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+ 
+        .project-card:hover {
+            border-color: #3498db;
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.2);
+            transform: translateY(-5px);
+        }
+ 
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+ 
+        .project-role {
+            color: #3498db;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+ 
+        .project-desc {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+ 
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+ 
+        .tag {
+            background: #3498db;
+            color: white;
+            font-size: 0.75rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+ 
+        .impact {
+            background: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 1rem;
+            border-radius: 5px;
+            color: #2c3e50;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+ 
+        .impact strong {
+            color: #3498db;
+        }
+ 
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+ 
+        .skill-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+ 
+        .skill-box h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 0.5rem;
+        }
+ 
+        .skill-box p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+ 
+        .skill-box:nth-child(2) {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+ 
+        .skill-box:nth-child(3) {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+ 
+        .skill-box:nth-child(4) {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+ 
+        /* About Section */
+        .about-content {
+            line-height: 1.8;
+            font-size: 1rem;
+            color: #555;
+        }
+ 
+        .about-content p {
+            margin-bottom: 1rem;
+        }
+ 
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+ 
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+ 
+        footer a:hover {
+            text-decoration: underline;
+        }
+ 
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+ 
+            section {
+                padding: 1.5rem;
+            }
+ 
+            section h2 {
+                font-size: 1.5rem;
+            }
+ 
+            nav {
+                gap: 1rem;
+            }
+ 
+            .contact-links {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Jain Shashwat</h1>
+        <p>Data Analyst | Business Intelligence | Strategic Insights</p>
+        <div class="contact-links">
+            <a href="mailto:your.email@example.com">Email</a>
+            <a href="https://github.com/jainshashwat037" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+        </div>
+    </header>
+ 
+    <!-- Navigation -->
+    <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About Me</a>
+    </nav>
+ 
+    <!-- Main Content -->
+    <main>
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-role">Qwixpert Consulting</div>
+                    <div class="project-title">Project 1: [Your Project Title]</div>
+                    <div class="project-desc">
+                        Brief description of what you accomplished. Focus on the problem you solved, the methodology you used, and the impact you created. Keep it concise but compelling.
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Tool 1</span>
+                        <span class="tag">Tool 2</span>
+                        <span class="tag">Tool 3</span>
+                    </div>
+                    <div class="impact">
+                        <strong>Impact:</strong> Specific metric (e.g., 25% improvement, $500K saved, 3 months delivery)
+                    </div>
+                </div>
+ 
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-role">Qwixpert Consulting</div>
+                    <div class="project-title">Project 2: [Your Project Title]</div>
+                    <div class="project-desc">
+                        Brief description of what you accomplished. Focus on the problem you solved, the methodology you used, and the impact you created. Keep it concise but compelling.
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Tool 1</span>
+                        <span class="tag">Tool 2</span>
+                        <span class="tag">Tool 3</span>
+                    </div>
+                    <div class="impact">
+                        <strong>Impact:</strong> Specific metric (e.g., 25% improvement, $500K saved, 3 months delivery)
+                    </div>
+                </div>
+ 
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-role">Qwixpert Consulting</div>
+                    <div class="project-title">Project 3: [Your Project Title]</div>
+                    <div class="project-desc">
+                        Brief description of what you accomplished. Focus on the problem you solved, the methodology you used, and the impact you created. Keep it concise but compelling.
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Tool 1</span>
+                        <span class="tag">Tool 2</span>
+                        <span class="tag">Tool 3</span>
+                    </div>
+                    <div class="impact">
+                        <strong>Impact:</strong> Specific metric (e.g., 25% improvement, $500K saved, 3 months delivery)
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Core Skills</h2>
+            <div class="skills-container">
+                <div class="skill-box">
+                    <h3>📊 Analytics & BI</h3>
+                    <p>Tableau • Power BI • Looker • Data warehousing • KPI tracking • Dashboard design • Reporting automation</p>
+                </div>
+                <div class="skill-box">
+                    <h3>💻 Technical Skills</h3>
+                    <p>SQL • Python • Excel (VBA) • R • Statistical analysis • Data modeling • Query optimization</p>
+                </div>
+                <div class="skill-box">
+                    <h3>📈 Business Skills</h3>
+                    <p>Process improvement • Strategic planning • Stakeholder management • Requirements gathering • Documentation</p>
+                </div>
+                <div class="skill-box">
+                    <h3>🎯 Methodologies</h3>
+                    <p>Agile • Lean Six Sigma • Data-driven decision making • Root cause analysis • Project management</p>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>
+                    Data analyst at Qwixpert Consulting with a passion for transforming complex business challenges into actionable insights. I specialize in building analytics infrastructure, designing dashboards for executive teams, and leading cross-functional initiatives that drive measurable business impact.
+                </p>
+                <p>
+                    Throughout my journey, I've developed expertise in data analysis, business intelligence, and strategic problem-solving. I'm committed to continuous learning and staying at the forefront of analytics and data science technologies.
+                </p>
+                <p>
+                    Outside of work, I'm passionate about [your interests]. I'm always eager to collaborate with like-minded professionals and contribute to innovative projects that make a real difference.
+                </p>
+            </div>
+        </section>
+    </main>
+ 
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Jain Shashwat. All rights reserved.</p>
+        <p>
+            <a href="https://github.com/jainshashwat037" target="_blank">GitHub</a> • 
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a> • 
+            <a href="mailto:your.email@example.com">Email</a>
+        </p>
+    </footer>
+</body>
+</html>
