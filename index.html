@@ -10,14 +10,14 @@
             padding: 0;
             box-sizing: border-box;
         }
- 
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             color: #2c3e50;
             min-height: 100vh;
         }
- 
+
         /* Header Section */
         header {
             background: white;
@@ -26,27 +26,58 @@
             text-align: center;
             border-bottom: 4px solid #3498db;
         }
- 
+
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
             color: #2c3e50;
         }
- 
+
         header p {
             font-size: 1.1rem;
             color: #7f8c8d;
             margin-bottom: 1.5rem;
         }
- 
+
+        .header-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .btn-resume {
+            background: #27ae60;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+        }
+
+        .btn-resume:hover {
+            background: #229954;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+        }
+
         .contact-links {
             display: flex;
             justify-content: center;
             gap: 1.5rem;
             flex-wrap: wrap;
-            margin-top: 1.5rem;
+            margin-top: 1rem;
         }
- 
+
         .contact-links a {
             text-decoration: none;
             color: #3498db;
@@ -56,12 +87,12 @@
             border-radius: 5px;
             transition: all 0.3s ease;
         }
- 
+
         .contact-links a:hover {
             background: #3498db;
             color: white;
         }
- 
+
         /* Navigation */
         nav {
             background: white;
@@ -72,25 +103,25 @@
             flex-wrap: wrap;
             border-bottom: 1px solid #ecf0f1;
         }
- 
+
         nav a {
             text-decoration: none;
             color: #2c3e50;
             font-weight: 600;
             transition: color 0.3s ease;
         }
- 
+
         nav a:hover {
             color: #3498db;
         }
- 
+
         /* Main Container */
         main {
             max-width: 1100px;
             margin: 2rem auto;
             padding: 0 1.5rem;
         }
- 
+
         /* Section Styling */
         section {
             background: white;
@@ -99,7 +130,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
- 
+
         section h2 {
             font-size: 2rem;
             margin-bottom: 1.5rem;
@@ -107,14 +138,14 @@
             border-bottom: 3px solid #3498db;
             padding-bottom: 0.5rem;
         }
- 
+
         /* Project Grid */
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 1.5rem;
         }
- 
+
         .project-card {
             background: #f8f9fa;
             border: 2px solid #ecf0f1;
@@ -123,20 +154,20 @@
             transition: all 0.3s ease;
             cursor: pointer;
         }
- 
+
         .project-card:hover {
             border-color: #3498db;
             box-shadow: 0 6px 20px rgba(52, 152, 219, 0.2);
             transform: translateY(-5px);
         }
- 
+
         .project-title {
             font-size: 1.3rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
             color: #2c3e50;
         }
- 
+
         .project-role {
             color: #3498db;
             font-size: 0.9rem;
@@ -145,21 +176,21 @@
             margin-bottom: 0.75rem;
             font-weight: 600;
         }
- 
+
         .project-desc {
             color: #555;
             font-size: 0.95rem;
             line-height: 1.6;
             margin-bottom: 1rem;
         }
- 
+
         .project-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
             margin-bottom: 1rem;
         }
- 
+
         .tag {
             background: #3498db;
             color: white;
@@ -168,7 +199,7 @@
             border-radius: 20px;
             font-weight: 500;
         }
- 
+
         .impact {
             background: #e8f4f8;
             border-left: 4px solid #3498db;
@@ -178,18 +209,18 @@
             font-size: 0.9rem;
             margin-top: 1rem;
         }
- 
+
         .impact strong {
             color: #3498db;
         }
- 
+
         /* Skills Section */
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
         }
- 
+
         .skill-box {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -197,42 +228,42 @@
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
         }
- 
+
         .skill-box h3 {
             font-size: 1.2rem;
             margin-bottom: 1rem;
             border-bottom: 2px solid rgba(255, 255, 255, 0.3);
             padding-bottom: 0.5rem;
         }
- 
+
         .skill-box p {
             font-size: 0.9rem;
             line-height: 1.6;
         }
- 
+
         .skill-box:nth-child(2) {
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         }
- 
+
         .skill-box:nth-child(3) {
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
         }
- 
+
         .skill-box:nth-child(4) {
             background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
         }
- 
+
         /* About Section */
         .about-content {
             line-height: 1.8;
             font-size: 1rem;
             color: #555;
         }
- 
+
         .about-content p {
             margin-bottom: 1rem;
         }
- 
+
         /* Footer */
         footer {
             background: #2c3e50;
@@ -242,34 +273,49 @@
             margin-top: 3rem;
             font-size: 0.9rem;
         }
- 
+
         footer a {
             color: #3498db;
             text-decoration: none;
         }
- 
+
         footer a:hover {
             text-decoration: underline;
         }
- 
+
         /* Responsive Design */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 1.8rem;
             }
- 
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .header-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-resume, .contact-links a {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+
             section {
                 padding: 1.5rem;
             }
- 
+
             section h2 {
                 font-size: 1.5rem;
             }
- 
+
             nav {
                 gap: 1rem;
             }
- 
+
             .contact-links {
                 gap: 1rem;
             }
@@ -281,20 +327,27 @@
     <header>
         <h1>Jain Shashwat</h1>
         <p>Data Analyst | Business Intelligence | Strategic Insights</p>
+        
+        <div class="header-buttons">
+            <a href="https://github.com/jainshashwat037/jainshashwat037.github.io/raw/main/Jain_Shashwat_Resume.pdf" class="btn-resume" download>
+                📄 Download Resume
+            </a>
+        </div>
+        
         <div class="contact-links">
-            <a href="mailto:your.email@example.com">Email</a>
+            <a href="mailto:jainshashwat0307@gmail.com">Email</a>
             <a href="https://github.com/jainshashwat037" target="_blank">GitHub</a>
             <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
         </div>
     </header>
- 
+
     <!-- Navigation -->
     <nav>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#about">About Me</a>
     </nav>
- 
+
     <!-- Main Content -->
     <main>
         <!-- Projects Section -->
@@ -317,7 +370,7 @@
                         <strong>Impact:</strong> Specific metric (e.g., 25% improvement, $500K saved, 3 months delivery)
                     </div>
                 </div>
- 
+
                 <!-- Project 2 -->
                 <div class="project-card">
                     <div class="project-role">Qwixpert Consulting</div>
@@ -334,7 +387,7 @@
                         <strong>Impact:</strong> Specific metric (e.g., 25% improvement, $500K saved, 3 months delivery)
                     </div>
                 </div>
- 
+
                 <!-- Project 3 -->
                 <div class="project-card">
                     <div class="project-role">Qwixpert Consulting</div>
@@ -353,7 +406,7 @@
                 </div>
             </div>
         </section>
- 
+
         <!-- Skills Section -->
         <section id="skills">
             <h2>Core Skills</h2>
@@ -376,7 +429,7 @@
                 </div>
             </div>
         </section>
- 
+
         <!-- About Section -->
         <section id="about">
             <h2>About Me</h2>
@@ -388,19 +441,19 @@
                     Throughout my journey, I've developed expertise in data analysis, business intelligence, and strategic problem-solving. I'm committed to continuous learning and staying at the forefront of analytics and data science technologies.
                 </p>
                 <p>
-                    Outside of work, I'm passionate about [your interests]. I'm always eager to collaborate with like-minded professionals and contribute to innovative projects that make a real difference.
+                    Currently pursuing my MBA at NMIMS Bengaluru, I'm eager to combine academic knowledge with practical experience to create impactful solutions that drive real business value. I'm always excited to collaborate with teams and contribute to innovative projects that make a difference.
                 </p>
             </div>
         </section>
     </main>
- 
+
     <!-- Footer -->
     <footer>
         <p>© 2024 Jain Shashwat. All rights reserved.</p>
         <p>
             <a href="https://github.com/jainshashwat037" target="_blank">GitHub</a> • 
             <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a> • 
-            <a href="mailto:your.email@example.com">Email</a>
+            <a href="mailto:jainshashwat0307@gmail.com">Email</a>
         </p>
     </footer>
 </body>
